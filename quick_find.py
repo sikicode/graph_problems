@@ -1,4 +1,4 @@
-class Graph:
+class UnionFind:
     def __init__(self, n):
         self.root = [_ for _ in range(n)]
         self.n = n
@@ -19,7 +19,7 @@ class Graph:
         return self.root[x] == self.root[y]
 
 if __name__ == '__main__':
-    gh = Graph(4)
+    gh = UnionFind(4)
     gh.union(1, 2)  # 0 1-2 3 [0,1,1,3]
     gh.union(1, 3)  # 0 3-1-2 [0,1,1,1]
     print(gh.find(3))  # 1
